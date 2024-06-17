@@ -1,0 +1,24 @@
+.productList {
+  @apply w-full h-auto flex
+}
+
+.productList table{
+  @apply w-4/5 m-auto
+}
+
+.productList table thead tr, .productList table tbody tr {
+  @apply flex flex-row justify-between
+}
+
+
+.productList table thead th, .productList table tbody td  {
+  @apply border-2 w-full py-2 bg-gray-400 mx-auto text-center text-sm
+}
+
+.productList table tbody td{
+  @apply border-2 w-full py-2 bg-green-400 mx-auto text-center
+}
+
+.productList table tbody td button {
+  @apply bg-blue-500 rounded-lg px-2 font-bold font-mono hover:bg-blue-400 active:bg-blue-800 active:scale-90
+}

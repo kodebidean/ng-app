@@ -1,0 +1,17 @@
+.header{
+  @apply w-full h-auto mb-8 p-12 bg-gradient-to-r from-yellow-200 via-green-200 to-green-500
+  py-4 rounded-lg
+}
+
+nav {
+  @apply justify-end w-full flex font-semibold font-mono bg-blue-300 rounded
+}
+
+
+
+nav button {
+ @apply border-2 px-2 transition hover:bg-blue-200 active:scale-90
+}
+h1 {
+  @apply text-3xl font-extrabold
+}

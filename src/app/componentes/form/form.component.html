@@ -1,0 +1,27 @@
+<div class="formComponent">
+  <form #productoForm="ngForm" (ngSubmit)="addProduct(productoForm)"
+    class="formContainer"
+  >
+    <div>
+      <label for="id">Id:</label>
+      <input id="id" name="id" [(ngModel)]="id" required>
+    </div>
+    <div>
+      <label for="category">Categoria:</label>
+      <input id="category" name="category" [(ngModel)]="categoria" required>
+    </div>
+    <div>
+      <label for="name">Nombre:</label>
+      <input id="name" name="name" [(ngModel)]="nombre" required>
+    </div>
+    <div>
+      <label for="price">Precio:</label>
+      <input id="price" name="price" [(ngModel)]="precio" required>
+    </div>
+    <div class="">
+      <button class="addBtn" type="submit">
+        Añadir
+      </button>
+    </div>
+  </form>
+</div>

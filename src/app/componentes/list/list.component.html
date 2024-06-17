@@ -1,0 +1,32 @@
+<div class="productList">
+  <table>
+    <thead>
+      <tr class="row">
+        <th>Id</th>
+        <th>Categoria</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Cantidad</th>
+        <th>Estado</th>
+        <th>Agregar</th>
+        <th>Vender</th>
+        <th>Borrar</th>
+        <th>Activar</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.categoria }}</td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.precio }}</td>
+        <td>{{ producto.cantidad }}</td>
+        <td>{{ producto.estado ? 'disponible' : 'no disponible' }}</td>
+        <td><button (click)="addCantidad(producto, 1)">Añadir</button></td>
+        <td><button (click)="venderProducto(producto, 1)">Vender</button></td>
+        <td><button (click)="removeProduct(producto)">Borrar</button></td>
+        <td><button (click)="changeState(producto)" [disabled]="producto.estado">Disponible</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

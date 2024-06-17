@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+import { FormComponent } from './componentes/form/form.component';
+import { ListComponent } from './componentes/list/list.component';
+import { FiltrarComponent } from './componentes/filtrar/filtrar.component';
+import { NavComponent } from './componentes/nav/nav.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [ FormComponent, ListComponent, FiltrarComponent, NavComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

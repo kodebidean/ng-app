@@ -1,0 +1,28 @@
+form {
+  @apply
+    flex flex-col space-y-4 my-8 mx-auto w-2/6 border-2 pt-8 rounded-lg
+    bg-gradient-to-r from-red-800 via-yellow-600 to-yellow-500 text-sky-100
+}
+form div {
+  @apply flex flex-col mx-auto w-full
+
+}
+form div label{
+  @apply font-bold
+  ml-14
+}
+form div input {
+
+    @apply
+      w-3/4 border-2 rounded-md text-gray-800 font-mono transition mx-auto
+      hover:bg-slate-200 px-2
+      hover:scale-105
+}
+
+.addBtn {
+  @apply
+    p-1 bg-blue-800 text-white rounded-lg w-24 my-6 mr-12
+    ml-auto font-mono font-bold hover:bg-blue-600 transition
+    active:bg-blue-800 active:scale-90
+}
+

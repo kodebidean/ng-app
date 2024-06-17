@@ -1,0 +1,47 @@
+<div class="filtrarComponent">
+
+
+  <div *ngIf="producto" class="mb-4">
+    <h3 class="font-bold mb-2">Producto Encontrado:</h3>
+    <p><span class="font-bold">ID:</span> {{ producto.id }}</p>
+    <p><span class="font-bold">Nombre:</span> {{ producto.nombre }}</p>
+    <p><span class="font-bold">Precio:</span> {{ producto.precio }}</p>
+    <p><span class="font-bold">Estado:</span> {{ producto.estado ? 'Disponible' : 'No disponible' }}</p>
+  </div>
+
+  <div class="mb-4 flex justify-between">
+    <div class="mb-4">
+      <label for="buscarId" class="block mb-2 font-bold">Buscar Producto por ID:</label>
+      <input #buscarId type="number" id="buscarId" class="border-2 py-2 px-4 rounded-lg">
+      <button (click)="buscarProducto(buscarId.value)" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-400 active:bg-blue-800 active:scale-90">Buscar</button>
+    </div>
+    <div class="my-auto">
+      <button (click)="ordenarAsc()" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-400 active:bg-blue-800 active:scale-90">Ordenar por Precio Ascendente</button>
+    </div>
+    <div class="my-auto">
+      <button (click)="ordenarDesc()" class="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-400 active:bg-blue-800 active:scale-90">Ordenar por Precio Descendente</button>
+    </div>
+
+  </div>
+
+  <table class="w-full border-collapse">
+    <thead>
+      <tr>
+        <th class="border-2 py-2 px-4 bg-gray-400 text-lg font-bold text-white">Id</th>
+        <th class="border-2 py-2 px-4 bg-gray-400 text-lg font-bold text-white">Categoria</th>
+        <th class="border-2 py-2 px-4 bg-gray-400 text-lg font-bold text-white">Nombre</th>
+        <th class="border-2 py-2 px-4 bg-gray-400 text-lg font-bold text-white">Precio</th>
+        <th class="border-2 py-2 px-4 bg-gray-400 text-lg font-bold text-white">Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productos">
+        <td class="border-2 py-2 px-4 bg-green-400 text-center">{{ producto.id }}</td>
+        <td class="border-2 py-2 px-4 bg-green-400 text-center">{{ producto.categoria }}</td>
+        <td class="border-2 py-2 px-4 bg-green-400 text-center">{{ producto.nombre }}</td>
+        <td class="border-2 py-2 px-4 bg-green-400 text-center">{{ producto.precio }}</td>
+        <td class="border-2 py-2 px-4 bg-green-400 text-center">{{ producto.estado ? 'Disponible' : 'No disponible' }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
